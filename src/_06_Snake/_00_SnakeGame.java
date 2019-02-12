@@ -199,6 +199,9 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 			System.out.println("true");
 			snake.feed();
 			setFoodLocation();
+			if (snake.score()<=timer.getInitialDelay()/10){
+			timer.setDelay(timer.getDelay()-snake.score());
+			}
 		}
 		
 		//4. call panel.repaint();
